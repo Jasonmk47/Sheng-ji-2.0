@@ -7,10 +7,11 @@ import Homepage from '../../ui/scenes/Homepage/Homepage.js';
 import GameBoard from '../../ui/scenes/Gameboard/Gameboard.js';
 
 const browserHistory = createBrowserHistory();
+const containerStyle = { height: '100%' };
 
 const renderRoutes = () => (
   <Router history={browserHistory}>
-    <div>
+    <div style={containerStyle}>
       <Route exact path="/" component={Homepage} />
       <Route path="/Game/*" component={GameBoard} />
     </div>
